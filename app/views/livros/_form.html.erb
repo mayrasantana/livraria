@@ -1,34 +1,8 @@
-<%= form_for(@livro) do |f| %>
-  <% if @livro.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@livro.errors.count, "error") %> prohibited this livro from being saved:</h2>
-
-      <ul>
-      <% @livro.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :titulo, 'Título' %><br />
-    <%= f.text_field :titulo %>
-  </div>
-  <div class="field">
-    <%= f.label :autor %><br />
-    <%= f.text_field :autor %>
-  </div>
-  <div class="field">
-    <%= f.label :editora %><br />
-    <%= f.text_field :editora %>
-  </div>
-  <div class="field">
-    <%= f.label :preco, 'Preço' %><br />
-    <%= f.text_field :preco %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Salvar' %>
-  </div>
+<%= semantic_form_for(@livro) do |f| %>
+  <%= f.input :titulo, :label => 'Título' %>
+  <%= f.input :autor %>
+  <%= f.input :editora, :label_method => :nome %>
+  <%= f.input :preco, :label => 'Preço' %>
+  <%= f.submit 'Salvar' %>
 <% end %>
 
