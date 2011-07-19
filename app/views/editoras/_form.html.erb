@@ -1,0 +1,22 @@
+<%= form_for(@editora) do |f| %>
+  <% if @editora.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@editora.errors.count, "error") %> prohibited this editora from being saved:</h2>
+
+      <ul>
+      <% @editora.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar' %>
+  </div>
+<% end %>
+

@@ -1,0 +1,23 @@
+<h1>Listing editoras</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @editoras.each do |editora| %>
+  <tr>
+    <td><%= editora.nome %></td>
+    <td><%= link_to 'Show', editora %></td>
+    <td><%= link_to 'Edit', edit_editora_path(editora) %></td>
+    <td><%= link_to 'Destroy', editora, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Editora', new_editora_path %>
