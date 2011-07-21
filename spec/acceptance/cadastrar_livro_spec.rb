@@ -7,7 +7,6 @@ feature 'cadastrar livro' do
     Editora.create! :nome => 'Mundo Louco'
 
     visit new_livro_path
-    save_and_open_page
     fill_in 'Título', :with => 'O Pequeno Príncipe'
     fill_in 'Autor', :with => 'Antoine de Saint-Exupery'
     select 'Mundo Louco', :from => 'Editora'
