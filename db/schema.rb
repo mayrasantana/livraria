@@ -10,12 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110719184319) do
+ActiveRecord::Schema.define(:version => 20110721180146) do
 
   create_table "editoras", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "desconto"
   end
 
   create_table "livros", :force => true do |t|

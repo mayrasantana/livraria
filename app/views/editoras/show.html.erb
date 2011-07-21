@@ -5,6 +5,13 @@
   <%= @editora.nome %>
 </p>
 
+<p>
+  <b>Desconto:</b>
+  <%= @editora.desconto %>%
+</p>
+
+
 
 <%= link_to 'Edit', edit_editora_path(@editora) %> |
 <%= link_to 'Back', editoras_path %>
+
